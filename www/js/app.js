@@ -1,4 +1,4 @@
-angular.module('ionicApp', ['ionic','starter.controllers'])
+angular.module('ionicApp', ['ionic','starter.controllers','controlleretst','servicesCtrol'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -37,7 +37,8 @@ angular.module('ionicApp', ['ionic','starter.controllers'])
       url: "/about",
       views: {
         'about-tab': {
-          templateUrl: "templates/about.html"
+          templateUrl: "templates/about.html",
+          controller: 'appHttp'
         }
       }
     })
