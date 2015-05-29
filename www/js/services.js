@@ -8,7 +8,7 @@ angular.module('servicesCtrol',[])
     }).
   success(function(data, status, headers, config) {
     	console.log('recibido..... ' + status);
-    	Window.alert('recibido.....'+ status);
+    //	Window.alert('recibido.....'+ status);
     // this callback will be called asynchronously
     // when the response is available
   }).

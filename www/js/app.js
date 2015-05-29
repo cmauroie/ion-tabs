@@ -1,6 +1,8 @@
 angular.module('ionicApp', ['ionic','starter.controllers','controlleretst','servicesCtrol'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+  $ionicConfigProvider.tabs.position("bottom");
 
   $stateProvider
     .state('tabs', {
@@ -57,9 +59,17 @@ angular.module('ionicApp', ['ionic','starter.controllers','controlleretst','serv
           templateUrl: "templates/contact.html"
         }
       }
+    })
+    .state('tabs.location', {
+      url: "/location",
+      views: {
+        'location-tab': {
+          templateUrl: "templates/location.html",
+         // controller: 'customersCtrl',
+         // controller:'AngularJSCtrl'
+        }
+      }
     });
 
-
    $urlRouterProvider.otherwise("/tab/home");
-
 })
